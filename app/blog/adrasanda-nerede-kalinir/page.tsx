@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Adrasan'da Nerede Kalınır?",
+  title: "Adrasan'da Nerede Kalınır? | Sazak Teknesi",
   description:
-    "Adrasan konaklama seçenekleri: pansiyon, butik otel, kamp alanları. Bütçenize göre en iyi konaklama önerileri.",
+    "Adrasan konaklama rehberi: pansiyon, butik otel, kamp alanı ve bungalov seçenekleri. Bütçenize ve tarzınıza uygun en iyi Adrasan konaklama önerileri.",
   alternates: { canonical: "https://adrasantekneturlari.org/blog/adrasanda-nerede-kalinir" },
 };
 
@@ -19,7 +19,7 @@ export default function AdrasandaNeredeKalinir() {
       <main>
         <section className="relative pt-20 h-[55vh] min-h-[400px] flex items-end overflow-hidden">
           <Image
-            src="/images/sazak-6.jpg"
+            src="/images/sazak-20.jpg"
             alt="Adrasan'da nerede kalınır"
             fill
             priority
@@ -33,12 +33,12 @@ export default function AdrasandaNeredeKalinir() {
               </svg>
               Blog
             </Link>
-            <span className="inline-block bg-teal-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Konaklama</span>
+            <span className="inline-block bg-ocean-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Seyahat Rehberi</span>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">Adrasan&apos;da Nerede Kalınır?</h1>
             <div className="flex items-center gap-4 text-white/60 text-sm">
-              <span>5 Nisan 2024</span>
+              <span>25 Nisan 2024</span>
               <span>·</span>
-              <span>4 dk okuma</span>
+              <span>5 dk okuma</span>
             </div>
           </div>
         </section>
@@ -46,70 +46,79 @@ export default function AdrasandaNeredeKalinir() {
         <section className="py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-12">
-              <article className="lg:col-span-2">
-                <p className="text-xl text-navy-600 leading-relaxed font-medium mb-8">
-                  Adrasan, 5 yıldızlı konforu arayanlar için değil; doğayla iç içe,
-                  sakin ve özgün bir tatil arayanlar için mükemmel bir destinasyon.
+              <article className="lg:col-span-2 prose prose-lg max-w-none text-navy-700">
+                <p className="text-xl text-navy-600 leading-relaxed font-medium not-prose mb-8">
+                  Adrasan, büyük tatil köylerinden uzak, küçük ve samimi konaklama
+                  seçenekleriyle öne çıkıyor. İşte her bütçeye ve tarza uygun
+                  konaklama alternatifleri.
                 </p>
 
-                <div className="bg-teal-50 rounded-2xl p-6 mb-8">
-                  <p className="font-semibold text-teal-900 mb-2">Bilmeniz Gereken</p>
-                  <p className="text-sm text-teal-800">
-                    Adrasan, Olympos-Beydağları Sahil Milli Parkı sınırları içinde yer alır.
-                    Bu nedenle büyük otel zincirleri ve beton yapılaşma yoktur.
-                    Tüm tesisler doğayla uyumlu, küçük ölçekli ve samimi.
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Pansiyon ve Butik Oteller</h2>
+                <p className="text-navy-600 leading-relaxed mb-4">
+                  Adrasan&apos;ın en yaygın konaklama seçeneği aile işletmesi pansiyonlar.
+                  Genellikle sahile 5–10 dakika yürüme mesafesinde, bahçeli ve
+                  kahvaltı dahil seçenekler sunan bu pansiyonlar, samimi Türk
+                  misafirperverliğini yaşatıyor.
+                </p>
+                <p className="text-navy-600 leading-relaxed mb-6">
+                  Butik oteller ise son yıllarda çoğalmaya başladı. Daha modern
+                  imkânlar arayan ziyaretçiler için uygun fiyatlı ve kaliteli
+                  seçenekler mevcut. Pek çoğu deniz manzaralı teraslar ve
+                  havuz sunuyor.
+                </p>
+
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Kamp Alanları ve Bungalovlar</h2>
+                <p className="text-navy-600 leading-relaxed mb-4">
+                  Doğayla iç içe olmak isteyenler için Adrasan çevresinde çok
+                  sayıda kamp alanı ve bungalov tesis bulunuyor. Çam ormanları
+                  içinde kurulan bu tesisler, doğaseverler için eşsiz bir deneyim
+                  sunuyor. Çoğu tesisin sahil erişimi ve temel olanakları mevcut.
+                </p>
+
+                <div className="bg-ocean-50 rounded-2xl p-6 not-prose mb-8">
+                  <p className="font-bold text-navy-900 mb-2">Konaklama + Tekne Turu Paketi</p>
+                  <p className="text-sm text-navy-600 mb-4">
+                    Konaklama ararken bize danışın, tekne turunuzu da birlikte planlayalım.
                   </p>
+                  <a
+                    href="https://wa.me/905383423380?text=Merhaba%2C%20konaklama%20ve%20tekne%20turu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary text-sm"
+                  >
+                    Bilgi Al
+                  </a>
                 </div>
 
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Pansiyon ve Küçük Oteller</h2>
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Kiralık Villalar</h2>
                 <p className="text-navy-600 leading-relaxed mb-4">
-                  Adrasan&apos;ın asıl konaklama seçeneği aile işletmesi pansiyonlar.
-                  Ev sıcaklığında hizmet sunan bu küçük tesisler, genellikle sahile
-                  yürüme mesafesinde konumlanmış. Sabah kahvaltısı çoğunlukla dahil.
-                  Fiyatlar sezona göre değişse de uygun bütçeli seçenekler bulmak mümkün.
+                  Aile veya grup tatilleri için özel villa kiralama giderek
+                  yaygınlaşıyor. Genellikle 4–8 kişilik, özel havuzlu ve
+                  tam donanımlı mutfaklı bu villalar, uzun süreli konaklamalar
+                  için ekonomik ve konforlu bir seçenek.
                 </p>
 
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Bungalov ve Apart Seçenekleri</h2>
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Konaklama İçin İpuçları</h2>
                 <p className="text-navy-600 leading-relaxed mb-4">
-                  Biraz daha mahremiyet isteyenler için bungalov tarzı konaklama
-                  tesisleri de mevcut. Genellikle bahçeli ve mutfaklı olan bu
-                  seçenekler, özellikle aileler ve uzun süreli konaklama
-                  planlayanlar için ideal.
-                </p>
-
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Kamp Alanları</h2>
-                <p className="text-navy-600 leading-relaxed mb-4">
-                  Doğa tutkunları için Adrasan, kamp açısından da zengin seçenekler
-                  sunuyor. Hem sahil kampları hem de orman içi kamp alanları mevcut.
-                  Yıldız altında uyumak ve sabahları deniz sesiyle uyanmak isteyenler
-                  için kamp tartışmasız en keyifli seçenek.
-                </p>
-                <p className="text-navy-600 leading-relaxed mb-4">
-                  Kamp için gerekli ekipmanınızı yanınızda getirmeniz tavsiye edilir.
-                  Bazı kamp alanları temel ekipman kiralama hizmeti sunsa da kendi
-                  uyku tulumunuzu ve çadırınızı getirmek her zaman daha akıllıca.
-                </p>
-
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Ne Zaman Gidilir?</h2>
-                <p className="text-navy-600 leading-relaxed mb-4">
-                  Adrasan&apos;ı ziyaret için en ideal dönem Mayıs-Ekim arası.
-                  Haziran-Eylül aylarında hem deniz hem hava sıcaklıkları yüzme
-                  için mükemmel. Yüksek sezon Temmuz-Ağustos olduğundan bu dönemde
-                  konaklama rezervasyonunuzu önceden yapmanız şiddetle önerilir.
+                  Temmuz–Ağustos aylarında yoğunluk zirveye ulaşıyor; bu dönemde
+                  en az 1–2 ay öncesinden rezervasyon yaptırmanız şiddetle öneriliyor.
+                  Haziran başı ve Eylül ayları hem daha sakin hem de fiyat açısından
+                  avantajlı dönemler. Suyun sıcaklığı yüzme için hâlâ mükemmel.
                 </p>
                 <p className="text-navy-600 leading-relaxed">
-                  Mayıs ve Ekim ayları ise daha sakin, daha uygun fiyatlı ve
-                  kalabalıktan uzak Adrasan deneyimi için mükemmel.
-                  Doğa yürüyüşleri için bu dönemler özellikle ideal.
+                  Sahile yakın konaklamak için köy merkezini tercih edin; orman
+                  içinde sessizlik arıyorsanız biraz daha uzak konumdaki bungalov
+                  ve kamp alanları daha uygun olacaktır.
                 </p>
               </article>
 
+              {/* Sidebar */}
               <aside className="lg:col-span-1">
                 <div className="sticky top-24 space-y-6">
                   <div className="bg-ocean-50 rounded-2xl p-6">
-                    <h3 className="font-bold text-navy-900 mb-4">Tekne Turu Ayırtın</h3>
+                    <h3 className="font-bold text-navy-900 mb-4">Tekne Turu Rezervasyonu</h3>
                     <p className="text-sm text-navy-600 mb-4">
-                      Konaklarken mutlaka tekne turuna katılın!
+                      Adrasan&apos;dasınız, tekne turunu kaçırmayın! Günlük turlar her gün 09:30&apos;da.
                     </p>
                     <a
                       href="https://wa.me/905383423380?text=Merhaba%2C%20rezervasyon%20yapmak%20istiyorum."
@@ -120,6 +129,7 @@ export default function AdrasandaNeredeKalinir() {
                       WhatsApp ile Rezervasyon
                     </a>
                   </div>
+
                   <div className="bg-white rounded-2xl border border-navy-100 p-6">
                     <h3 className="font-bold text-navy-900 mb-4">Diğer Yazılar</h3>
                     <div className="space-y-3">
@@ -128,7 +138,11 @@ export default function AdrasandaNeredeKalinir() {
                         { slug: "adrasan-tarihcesi", title: "Adrasan Tarihçesi" },
                         { slug: "adrasana-nasil-gidilir", title: "Adrasan'a Nasıl Gidilir?" },
                       ].map((p) => (
-                        <Link key={p.slug} href={`/blog/${p.slug}`} className="block text-sm text-navy-700 hover:text-ocean-600 transition-colors py-1 border-b border-navy-50 last:border-0">
+                        <Link
+                          key={p.slug}
+                          href={`/blog/${p.slug}`}
+                          className="block text-sm text-navy-700 hover:text-ocean-600 transition-colors py-1 border-b border-navy-50 last:border-0"
+                        >
                           {p.title}
                         </Link>
                       ))}

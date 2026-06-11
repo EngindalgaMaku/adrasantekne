@@ -1,11 +1,56 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
+const TUR_LABELS: Record<string, string> = {
+  adrasan: "Adrasan Tekne Turu",
+  suluada: "Suluada Tekne Turu",
+  mehtap: "Mehtap Turu",
+  ozel: "Özel Tekne Turu",
+};
+
 export default function IletisimPage() {
+  const [form, setForm] = useState({
+    ad: "",
+    telefon: "",
+    tur: "",
+    tarih: "",
+    mesaj: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const turLabel = TUR_LABELS[form.tur] || form.tur || "belirtilmedi";
+    const tarihStr = form.tarih
+      ? new Date(form.tarih).toLocaleDateString("tr-TR")
+      : "belirtilmedi";
+
+    const text = [
+      "Merhaba, rezervasyon bilgisi almak istiyorum.",
+      `Ad Soyad: ${form.ad || "belirtilmedi"}`,
+      `Telefon: ${form.telefon || "belirtilmedi"}`,
+      `İlgilenilen Tur: ${turLabel}`,
+      `Tahmini Tarih: ${tarihStr}`,
+      form.mesaj ? `Mesaj: ${form.mesaj}` : null,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const url = `https://wa.me/905383423380?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <>
       <Header />
@@ -135,7 +180,7 @@ export default function IletisimPage() {
               {/* İletişim Formu */}
               <div>
                 <h2 className="text-2xl font-bold text-navy-900 mb-6">Mesaj Gönderin</h2>
-                <form className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-navy-700 mb-1.5">
@@ -143,6 +188,9 @@ export default function IletisimPage() {
                       </label>
                       <input
                         type="text"
+                        name="ad"
+                        value={form.ad}
+                        onChange={handleChange}
                         placeholder="Adınız Soyadınız"
                         className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-ocean-400 focus:ring-2 focus:ring-ocean-100 outline-none transition-all text-navy-900 placeholder:text-navy-300"
                       />
@@ -153,6 +201,9 @@ export default function IletisimPage() {
                       </label>
                       <input
                         type="tel"
+                        name="telefon"
+                        value={form.telefon}
+                        onChange={handleChange}
                         placeholder="05xx xxx xx xx"
                         className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-ocean-400 focus:ring-2 focus:ring-ocean-100 outline-none transition-all text-navy-900 placeholder:text-navy-300"
                       />
@@ -163,7 +214,12 @@ export default function IletisimPage() {
                     <label className="block text-sm font-medium text-navy-700 mb-1.5">
                       İlgilendiğiniz Tur
                     </label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-ocean-400 focus:ring-2 focus:ring-ocean-100 outline-none transition-all text-navy-900 bg-white">
+                    <select
+                      name="tur"
+                      value={form.tur}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-ocean-400 focus:ring-2 focus:ring-ocean-100 outline-none transition-all text-navy-900 bg-white"
+                    >
                       <option value="">Tur seçin</option>
                       <option value="adrasan">Adrasan Tekne Turu</option>
                       <option value="suluada">Suluada Tekne Turu</option>
@@ -178,6 +234,9 @@ export default function IletisimPage() {
                     </label>
                     <input
                       type="date"
+                      name="tarih"
+                      value={form.tarih}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-ocean-400 focus:ring-2 focus:ring-ocean-100 outline-none transition-all text-navy-900"
                     />
                   </div>
@@ -187,23 +246,24 @@ export default function IletisimPage() {
                       Mesajınız
                     </label>
                     <textarea
+                      name="mesaj"
+                      value={form.mesaj}
+                      onChange={handleChange}
                       rows={4}
                       placeholder="Sorularınızı veya isteklerinizi yazın..."
                       className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-ocean-400 focus:ring-2 focus:ring-ocean-100 outline-none transition-all text-navy-900 placeholder:text-navy-300 resize-none"
                     />
                   </div>
 
-                  <a
-                    href="https://wa.me/905383423380?text=Merhaba%2C%20rezervasyon%20bilgisi%20almak%20istiyorum."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full py-4 bg-ocean-500 hover:bg-ocean-600 text-white font-semibold rounded-xl transition-colors text-base"
+                  <button
+                    type="submit"
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-ocean-500 hover:bg-ocean-600 active:bg-ocean-700 text-white font-semibold rounded-xl transition-colors text-base cursor-pointer"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.45zM12.045 21.785h-.004a9.96 9.96 0 01-5.031-1.36l-.361-.214-3.741.975.998-3.622-.235-.372a9.808 9.808 0 01-1.52-5.192c.002-5.45 4.46-9.884 9.937-9.884a9.908 9.908 0 017.027 2.898 9.788 9.788 0 012.909 6.99c-.003 5.452-4.462 9.881-9.979 9.881zm5.464-7.399c-.299-.149-1.768-.869-2.042-.968-.273-.099-.472-.149-.671.149-.198.298-.769.968-.943 1.167-.173.199-.347.224-.645.075-.298-.15-1.258-.462-2.395-1.47-.886-.788-1.484-1.76-1.658-2.058-.173-.299-.018-.46.13-.608.134-.134.299-.348.448-.523.149-.175.199-.299.298-.498.099-.199.05-.374-.025-.523-.075-.15-.671-1.618-.92-2.216-.242-.582-.488-.503-.671-.512a12.6 12.6 0 00-.572-.011.96.96 0 00-.696.324c-.248.273-.945.92-.945 2.244 0 1.324.969 2.603 1.104 2.777.135.174 1.907 2.9 4.622 4.067.646.277 1.149.443 1.541.567.647.204 1.237.175 1.703.106.52-.077 1.768-.722 2.017-1.419.249-.697.249-1.295.174-1.419-.074-.124-.273-.199-.572-.349z"/>
                     </svg>
                     WhatsApp ile Gönder
-                  </a>
+                  </button>
                   <p className="text-xs text-navy-400 text-center">
                     Formu doldurun, WhatsApp&apos;ta önceden hazırlanmış mesajla bize ulaşın.
                   </p>

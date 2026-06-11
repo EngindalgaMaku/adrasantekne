@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Adrasan Tarihçesi",
+  title: "Adrasan Tarihçesi | Sazak Teknesi",
   description:
-    "Adrasan'ın tarihi: antik çağlardan günümüze Atrasas, Piri Reis haritaları ve Çavuşköy. Adrasan'ın tarihsel geçmişi.",
+    "Adrasan'ın zengin tarihi: antik Olympos uygarlığından günümüze uzanan tarihi yolculuk. Likya, Roma ve Bizans dönemlerinden izler taşıyan bu eşsiz koyun hikayesi.",
   alternates: { canonical: "https://adrasantekneturlari.org/blog/adrasan-tarihcesi" },
 };
 
@@ -19,7 +19,7 @@ export default function AdrasanTarihcesi() {
       <main>
         <section className="relative pt-20 h-[55vh] min-h-[400px] flex items-end overflow-hidden">
           <Image
-            src="/images/sazak-8.jpg"
+            src="/images/sazak-15.jpg"
             alt="Adrasan tarihçesi"
             fill
             priority
@@ -33,10 +33,10 @@ export default function AdrasanTarihcesi() {
               </svg>
               Blog
             </Link>
-            <span className="inline-block bg-navy-700 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Tarih</span>
+            <span className="inline-block bg-ocean-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Tarih &amp; Kültür</span>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">Adrasan Tarihçesi</h1>
             <div className="flex items-center gap-4 text-white/60 text-sm">
-              <span>10 Nisan 2024</span>
+              <span>20 Nisan 2024</span>
               <span>·</span>
               <span>6 dk okuma</span>
             </div>
@@ -46,79 +46,75 @@ export default function AdrasanTarihcesi() {
         <section className="py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-12">
-              <article className="lg:col-span-2">
-                <p className="text-xl text-navy-600 leading-relaxed font-medium mb-8">
-                  Adrasan kelimesinin tarihi ilk çağlara kadar uzansa da ilk defa
-                  M.S. 1400&apos;lerde &quot;Atrasas&quot; olarak belgelenmiştir.
+              <article className="lg:col-span-2 prose prose-lg max-w-none text-navy-700">
+                <p className="text-xl text-navy-600 leading-relaxed font-medium not-prose mb-8">
+                  Adrasan, yalnızca doğal güzellikleriyle değil, binlerce yıllık
+                  tarihi mirasyıyla da büyüleyen eşsiz bir koy. Bu topraklar
+                  antik çağlardan bu yana uygarlıkların kesişim noktası olmuştur.
                 </p>
 
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Antik Dönem</h2>
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Likya Döneminden İzler</h2>
                 <p className="text-navy-600 leading-relaxed mb-4">
-                  Adrasan ve çevresi, antik dönemde Likya bölgesinin önemli bir
-                  parçasıydı. Bölgede gerçekleştirilen arkeolojik çalışmalar, bu
-                  kıyıların binlerce yıl önce de iskân edildiğini ortaya koymaktadır.
-                  Yakın çevredeki Olympos antik kenti, bölgenin tarihsel önemini
-                  gözler önüne sermektedir.
+                  Adrasan ve çevresinin tarihi, antik Likya dönemine, MÖ 1. binyıla kadar
+                  uzanmaktadır. Likya Birliği&apos;ne bağlı kentlerin ticaret yolları bu
+                  kıyılardan geçiyordu. Mevcut arkeolojik bulgular, koyun erken dönemlerde
+                  küçük bir liman işlevi gördüğüne işaret etmektedir.
                 </p>
                 <p className="text-navy-600 leading-relaxed mb-6">
-                  Körfezin korunaklı yapısı, antik çağlardan bu yana ticaret
-                  gemileri ve balıkçı tekneleri için doğal bir liman işlevi
-                  görmüştür. Ceneviz Koyu&apos;nun adı, Orta Çağ&apos;da bu
-                  koyları kullanan Cenevizli denizcilere referans verir.
+                  Yakınındaki Olympos antik kenti (günümüz Çıralı/Olympos), bölgenin en
+                  önemli Likya şehirlerinden biriydi. Olympos, Roma döneminde de önemini
+                  korumuş; MS 1. yüzyılda Romalılar tarafından yeniden imar edilmiştir.
                 </p>
 
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Piri Reis ve Kitab-ı Bahriye</h2>
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Ceneviz ve Osmanlı Dönemi</h2>
                 <p className="text-navy-600 leading-relaxed mb-4">
-                  Büyük Türk denizcisi Piri Reis, meşhur eseri Kitab-ı Bahriye&apos;de
-                  Adrasan&apos;dan söz eder. Piri Reis bu körfezi, güvenli demirlenme
-                  imkanı sunan önemli bir sığınak olarak tanımlamıştır. Bu kayıt,
-                  bölgenin 16. yüzyılda bile stratejik denizcilik önemi taşıdığını
-                  kanıtlamaktadır.
+                  Orta Çağ&apos;da Akdeniz ticaretine hakim olan Cenevizliler, bölgedeki
+                  stratejik koyları sıkça kullanmıştır. Adrasan yakınlarındaki
+                  &quot;Ceneviz Koyu&quot; adı, bu Orta Çağ varlığının günümüze yansımasıdır.
+                  Osmanlı döneminde ise bölge, Teke Sancağı bünyesinde denizcilik ve
+                  küçük çaplı balıkçılıkla geçimini sağlamıştır.
                 </p>
 
-                <div className="bg-navy-50 rounded-2xl p-6 my-8 border-l-4 border-ocean-500">
-                  <p className="italic text-navy-700 leading-relaxed">
-                    &quot;...bu koy gemilerin sığınacağı güzel bir yerdir, içinde tatlı su
-                    kaynakları mevcuttur...&quot;
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Korsanlar Koyu Efsanesi</h2>
+                <p className="text-navy-600 leading-relaxed mb-4">
+                  Bölgedeki koylardan biri &quot;Korsan Koyu&quot; olarak adlandırılmaktadır.
+                  Akdeniz&apos;de yaygın faaliyet gösteren korsanlar, bu sarp ve derin
+                  koyları sığınak olarak kullanmıştır. Yerel halk arasında hâlâ
+                  define ve hazine hikayeleri anlatılmaktadır.
+                </p>
+
+                <div className="bg-ocean-50 rounded-2xl p-6 not-prose mb-8">
+                  <p className="font-bold text-navy-900 mb-2">Tarihi Koyları Keşfedin</p>
+                  <p className="text-sm text-navy-600 mb-4">
+                    Ceneviz ve Korsan koylarını tekne turumuzu yaparak denizden görün.
                   </p>
-                  <p className="text-sm text-navy-400 mt-2">— Piri Reis, Kitab-ı Bahriye (1521)</p>
+                  <Link href="/tekne-turlari/adrasan" className="btn-primary text-sm">
+                    Adrasan Turu Detayları
+                  </Link>
                 </div>
 
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Çavuşköy ve Adrasan Adının Yerleşmesi</h2>
+                <h2 className="text-2xl font-bold text-navy-900 mt-10 mb-4">Günümüz Adrasanı</h2>
                 <p className="text-navy-600 leading-relaxed mb-4">
-                  İdari açıdan bakıldığında Adrasan, Antalya&apos;nın Kumluca ilçesine
-                  bağlı Çavuşköy kasabasının sahil bölgesine verilen isimdir. Zamanla
-                  sahilin ünü Çavuşköy ismini geride bırakmış ve bu güzel beldenin
-                  adı yerine Adrasan kullanılmaya başlanmıştır.
-                </p>
-                <p className="text-navy-600 leading-relaxed mb-6">
-                  20. yüzyılın ortalarından itibaren Adrasan, yavaş yavaş turizm
-                  haritasına girmeye başlamıştır. Doğal güzelliği, sakin atmosferi
-                  ve bozulmamış ekosistemiyle önce yerli turistlerin, ardından
-                  yabancı ziyaretçilerin ilgisini çekmiştir.
-                </p>
-
-                <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Günümüzde Adrasan</h2>
-                <p className="text-navy-600 leading-relaxed mb-4">
-                  Bugün Adrasan, kitlesel turizmin dışında kalmayı başarmış,
-                  doğasını büyük ölçüde korumuş nadir destinasyonlardan biridir.
-                  Olympos-Beydağları Sahil Milli Parkı sınırları içinde yer alması,
-                  bölgenin doğal dokusunun korunmasına büyük katkı sağlamaktadır.
+                  Cumhuriyet döneminde küçük bir balıkçı köyü olan Adrasan, 1980&apos;lerden
+                  itibaren doğa turizmiyle tanışmıştır. Asfaltsız yollar, elektrik
+                  direkleri ve bozulmamış kıyı şeridi, Adrasan&apos;ı diğer turistik
+                  yerlerden farklı kılmaktadır.
                 </p>
                 <p className="text-navy-600 leading-relaxed">
-                  Kalabalık tatil beldelerinin aksine Adrasan, sakin ve huzurlu
-                  bir atmosfer arayanların gözdesi olmaya devam etmektedir. İşte
-                  bu özgünlük, her yıl binlerce ziyaretçiyi bu büyülü köşeye
-                  çeken en önemli etkendir.
+                  Bugün Adrasan; kalkınma baskısına rağmen doğal dokusunu büyük
+                  ölçüde koruyan, yoğun kitlesel turizmin dışında kalan nadir
+                  Akdeniz koylarından biridir. Bu özgünlük, ziyaretçilerin tekrar
+                  tekrar gelmesinin temel nedenidir.
                 </p>
               </article>
 
+              {/* Sidebar */}
               <aside className="lg:col-span-1">
                 <div className="sticky top-24 space-y-6">
                   <div className="bg-ocean-50 rounded-2xl p-6">
                     <h3 className="font-bold text-navy-900 mb-4">Tekne Turu Rezervasyonu</h3>
                     <p className="text-sm text-navy-600 mb-4">
-                      Tarihi koyları bizzat keşfetmek ister misiniz?
+                      Tarihi koyları teknemizle keşfet. Günlük turlar her gün 09:30&apos;da!
                     </p>
                     <a
                       href="https://wa.me/905383423380?text=Merhaba%2C%20rezervasyon%20yapmak%20istiyorum."

@@ -26,11 +26,20 @@ export const metadata: Metadata = {
     siteName: "Adrasan Tekne Turları",
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: "/images/sazak-5.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Adrasan Tekne Turu - Sazak Teknesi",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Adrasan Tekne Turu | Sazak Teknesi",
     description: "Adrasan'ın muhteşem koylarını Sazak Teknesi ile keşfedin.",
+    images: ["/images/sazak-5.jpg"],
   },
   alternates: {
     canonical: "https://adrasantekneturlari.org",
