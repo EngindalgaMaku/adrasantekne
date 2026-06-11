@@ -80,17 +80,20 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "TouristAttraction",
+              "@type": "LocalBusiness",
+              "@id": "https://adrasantekneturlari.org",
               name: "Sazak Teknesi - Adrasan Tekne Turları",
-              description:
-                "Adrasan'ın muhteşem koylarını Sazak Teknesi ile keşfedin.",
+              description: "Adrasan'ın muhteşem koylarını Sazak Teknesi ile keşfedin. Suluada, Sazak, Ceneviz koyları ve mehtap turları.",
               url: "https://adrasantekneturlari.org",
               telephone: "+905383423380",
+              priceRange: "₺₺",
+              image: "https://adrasantekneturlari.org/images/sazak-5.jpg",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Adrasan Sahili",
                 addressLocality: "Adrasan",
                 addressRegion: "Antalya",
+                postalCode: "07350",
                 addressCountry: "TR",
               },
               geo: {
@@ -98,6 +101,10 @@ export default function RootLayout({
                 latitude: 36.3275,
                 longitude: 30.4714,
               },
+              hasMap: "https://maps.google.com/?q=Adrasan,Kumluca,Antalya",
+              sameAs: [
+                "https://wa.me/905383423380",
+              ],
               openingHoursSpecification: {
                 "@type": "OpeningHoursSpecification",
                 dayOfWeek: [
